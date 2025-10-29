@@ -32,9 +32,9 @@ public class NinjaController {
     }
 
     // read
-    @GetMapping("/listarid")
-    public String mostrarNinjaId(){
-        return "Mostrar ninjas";
+    @GetMapping("/listarid/{id}")
+    public NinjaModel mostrarNinjaId(@PathVariable Long id){
+        return ninjaService.listarNinjasId(id);
     }
 
     // update
