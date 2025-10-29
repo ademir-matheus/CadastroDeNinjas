@@ -29,7 +29,7 @@ public class NinjaModel {
     private String email;
 
     @Column(name = "img_url")
-    private int imgUrl;
+    private String imgUrl;
 
     @Column(name = "idade")
     private int idade;
