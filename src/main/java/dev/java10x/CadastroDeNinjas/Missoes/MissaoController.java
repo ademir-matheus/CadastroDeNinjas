@@ -22,9 +22,9 @@ public class MissaoController {
     public List<MissaoModel> listarMissao() {
         return missaoService.listarMissoes();
     }
-    @GetMapping("/listarid")
-    public String listarMissaoId(){
-        return "";
+    @GetMapping("/listarid/{id}")
+    public MissaoModel listarMissaoId(@PathVariable Long id){
+        return missaoService.listarMissaoId(id);
     }
     @PutMapping("/alterar")
     public String alterarMissao(){
